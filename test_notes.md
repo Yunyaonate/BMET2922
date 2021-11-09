@@ -51,7 +51,7 @@ Requirements| Function name | under file |
 ALRM-1 (input data validation) | commAlarms() | alarmFunction 
 ALRM-2, ALRM-3 (raise alarm when BPM is low or high) | bpmAlarm() | alarmFunction
 ALRM-4 (alarms are indicated graphically)|**Haven't done**|alarmFunction
-ALRM-5, ALRM-7, ALRM-11 (alarms with timestamps) |**Haven't done**|alarmFunction
+ALRM-5, ALRM-7, ALRM-11 (alarms with timestamps) |**Partially done, but keep printing alarms instead of just printing once**|alarmFunction
 ALRM-6, ALRM-8, ALRM-9, ALRM-10|**setThresholds()**|alarmFunction
 ---
 
