@@ -1,3 +1,17 @@
+# Current process:
+
+should be all good except for
+
+1. adding current and mean BPM in Text format
+
+2. displaying alarms graphically
+
+3. clear all the data when reconnect, and click the clear button
+
+__have tested with both csv and live data__
+
+
+
 # Host System Design
 
 The test is divided into 3 parts: 
@@ -26,7 +40,9 @@ The functions are defined in the following files:
 
 <br /> 
 ----
+
 # Host Alarm Test
+
 ## Related functions and requirements:
 
 Requirements| Function name | under file |
@@ -93,7 +109,7 @@ exit GUI| guiAction()| guiFunction
 ## 1. seqnumCheck()
 cato| comment
 --|--
-Discreption| check if the sequence number of this message is correct
+Description| check if the sequence number of this message is correct
 Input| raw_message, oldSeqNum
 Output| True/False 
 Author| Jacinta and Yunyao Duan
@@ -103,7 +119,7 @@ Author| Jacinta and Yunyao Duan
 ## 2. checksum()
 cato| comment
 --|--
-Discreption| check if the received checksum and calculated
+Description| check if the received checksum and calculated
 Input| raw_message
 Output| True/False
 Author| Yunyao Duan
@@ -113,7 +129,7 @@ Author| Yunyao Duan
 ## 3. commAlarm()
 cato| comment
 --|--
-Discreption| combines all the comm alarm requirements, update alarm_string if there's comm error
+Description| combines all the comm alarm requirements, update alarm_string if there's comm error
 Input| raw_message, seqnumCheck(), checksum()
 Output| True/False, alarm_string
 Author| Yunyao Duan
@@ -123,7 +139,7 @@ Author| Yunyao Duan
 ## 4. fourBytesToNum()
 cato| comment
 --|--
-Discreption| convert the bytes in the raw message to binary number, and store the data to class for later use
+Description| convert the bytes in the raw message to binary number, and store the data to class for later use
 Input| raw_message
 Output| this_message, data.pulse, data.bpm
 Author| Yunyao Duan
@@ -134,7 +150,7 @@ Author| Yunyao Duan
 ## 5. meanBPM()
 cato| comment
 --|--
-Discreption| calculate the mean BPM over the last 15 seconds
+Description| calculate the mean BPM over the last 15 seconds
 Input| bpmCnt (count for 15 loops)
 Output| data.mean_bpm
 Author| Yunyao Duan
@@ -145,7 +161,7 @@ Author| Yunyao Duan
 ## 6. get_data_to_draw()
 cato| comment
 --|--
-Discreption| get the data to display in this frame
+Description| get the data to display in this frame
 Input| dt_w, DATALEN_w, dt_b, DATALEN_b
 Output| t_w_this, pulse_this, t_b_this, bpm_this
 Author| Yunyao Duan
