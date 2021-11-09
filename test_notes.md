@@ -78,8 +78,8 @@ Requirements| Function name | under file |
 HDIS-1, HDIS-7, HDIS-8 | draw_gui_window() | guiFunctions
 HDIS-2 (latency of less than 2 seconds) |???|--
 HDIS-3 (update less than 1 second) |mainloop|--
-HDIS-4 |plotFigure()|guiFunction
-HDIS-5, HDIS-6 |**Haven't done**|guiFunction
+HDIS-4,HDIS-5 |plotFigure()|guiFunction
+HDIS-6 (current and mean BPM displayed in text format)|**Haven't done**|guiFunction
 set High and Low threshold| setThreshold() inside of guiAction()| alarmFunction
 log all the actions|guiAction()|guiFunction
 clear data| guiAction()|guiFunction
